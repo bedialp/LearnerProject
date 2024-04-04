@@ -14,13 +14,8 @@ namespace LearnerProject.Models.Entities
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
-
-        public int ClassroomId { get; set; }
-
-        public virtual Classroom Classroom { get; set; }
-
         public List<Review> Reviews { get; set; }
-        public List<CourseRegister> courseRegisters { get; set; }
+        public List<CourseRegister> CourseRegisters { get; set; }
 
     }
 }
