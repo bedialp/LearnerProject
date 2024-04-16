@@ -1,0 +1,28 @@
+﻿@model LearnerProject.Models.Entities.Course
+@{
+    ViewBag.Title = "UpdateCourse";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h2>Kurs Ekleme Sayfasi</h2>
+
+<form>
+    <label> Kurs Adi</label>
+    @Html.TextBoxFor(x => x.CourseName, new { @class = "form-control" })
+    <br />
+    <label> Resim URL </label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Aciklama </label>
+    @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control" })
+    <br />
+    <label>Fiyat </label>
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    <label> </label>
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, "Kategoriyi Secin", new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary"><i class="fa fa-save"> </i>Kaydet</button>
+</form>
+
+
+BURADA ISLEMLER YAPILMADI ~~~!!!~~~

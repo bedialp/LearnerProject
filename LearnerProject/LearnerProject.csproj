@@ -127,6 +127,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminCourseController.cs" />
+    <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -483,6 +485,10 @@
     <Content Include="Templates\learner-1.0.0\scss\_site-navbar.scss" />
     <Content Include="Templates\learner-1.0.0\scss\_variables.scss" />
     <Content Include="Views\UILayout\Index.cshtml" />
+    <Content Include="Views\AdminCourse\AddCourse.cshtml" />
+    <Content Include="Views\AdminCourse\Index.cshtml" />
+    <Content Include="Views\AdminCourse\UpdateCourse.cshtml" />
+    <Content Include="Views\AdminDashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
