@@ -11,6 +11,7 @@ namespace LearnerProject.Controllers
     public class TeacherCourseController : Controller
     {
         LearnerContext context = new LearnerContext();
+
         public ActionResult Index()
         {
             string name = Session["teacherName"].ToString();
