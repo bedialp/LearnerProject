@@ -55,7 +55,7 @@ namespace LearnerProject.Controllers
             var value = context.Categories.Find(category.CategoryId);
             value.CategoryName = category.CategoryName;
             value.Icon=category.Icon;
-            value.Status=category.Status;
+            value.Status= true;
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

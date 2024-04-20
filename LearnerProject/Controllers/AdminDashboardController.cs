@@ -9,7 +9,7 @@ namespace LearnerProject.Controllers
 {
     public class AdminDashboardController : Controller
     {
-        LearnerContext context=new LearnerContext();
+        LearnerContext context = new LearnerContext();
         // GET: AdminDashboard
         public ActionResult Index()
         {
@@ -17,9 +17,9 @@ namespace LearnerProject.Controllers
             ViewBag.v2 = context.Categories.Count();
             ViewBag.v3 = context.Classrooms.Count();
             ViewBag.v4 = context.Students.Count();
-            ViewBag.v5 = context.Courses.OrderByDescending(x=>x.Price).Select(x=>x.CourseName).FirstOrDefault();
-            ViewBag.v6 = context.Courses.Where(x=>x.Category.CategoryName == "Kodlama").Count();
-            ViewBag.v7 = context.Reviews.OrderByDescending(x=>x.ReviewValue).Select(x=>x.Course.CourseName).FirstOrDefault();
+            ViewBag.v5 = context.Courses.OrderByDescending(x => x.Price).Select(x => x.CourseName).FirstOrDefault();
+            ViewBag.v6 = context.Courses.Where(x => x.Category.CategoryName == "Kodlama").Count();
+            ViewBag.v7 = context.Reviews.OrderByDescending(x => x.ReviewValue).Select(x => x.Course.CourseName).FirstOrDefault();
             return View();
         }
     }

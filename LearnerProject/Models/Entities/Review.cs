@@ -11,6 +11,7 @@ namespace LearnerProject.Models.Entities
         public int CourseId { get; set; }
         public virtual Course Course { get; set; }
         public double ReviewValue { get; set; }
+        public string Comment { get; set; }
         public int StudentId { get; set; }
         public virtual Student Student { get; set; }
     }
