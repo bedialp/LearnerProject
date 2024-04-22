@@ -1,0 +1,38 @@
+﻿@model List<LearnerProject.Models.Entities.Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h3>Iletisim</h3>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Adres</th>
+        <th>Calisma Saatleri</th>
+        <th>Email</th>
+        <th>Telefon</th>
+
+        <th>Islemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Address</td>
+            <td>@item.OpenHours</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>
+                <a href="/AdminContact/UpdateContact/@item.ContactId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Guncelle</a>
+                <a href="/AdminContact/DeleteContact/@item.ContactId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a>
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/AdminContact/AddContact/" class="btn btn-outline-info">Yeni Iletisim Bilgisi Ekle</a>
+
+

@@ -1,0 +1,25 @@
+﻿﻿@model LearnerProject.Models.Entities.Contact
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Iletisim Bilgisi Güncelleme Sayfası</h3>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ContactId)
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br />
+    <label>Calisma Saatleri</label>
+    @Html.TextBoxFor(x => x.OpenHours, new { @class = "form-control" })
+    <br />
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+   
+    <button class="btn btn-outline-primary"><i class="fa fa-pen"></i> Güncelle</button>
+</form>
