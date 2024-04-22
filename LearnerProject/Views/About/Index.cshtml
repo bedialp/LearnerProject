@@ -1,0 +1,43 @@
+﻿﻿@model List<LearnerProject.Models.Entities.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h3>Hakkımızda</h3>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>Görsel URL</th>
+            <th>Item1</th>
+            <th>Item2</th>
+            <th>Item3</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.ImageUrl</td>
+                <td>@item.Item1</td>
+                <td>@item.Item2</td>
+                <td>@item.Item3</td>
+                <td>
+                    <a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Sil</a>
+                    <a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-info"> <i class="fa fa-edit"></i>Guncelle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/About/AddAbout/" class="btn btn-outline-success"><i class="fa fa-plus m-2"></i>Hakkımda Bilgisi Ekle</a>
