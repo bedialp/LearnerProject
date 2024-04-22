@@ -1,0 +1,23 @@
+﻿﻿@model LearnerProject.Models.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h3 >Referans Güncelle</h3>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.TestimonialId)
+    <label>Isim Soyisim</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Baslik</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Gorsel URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fa fa-edit"></i>Güncelle</button>
+
+</form>
