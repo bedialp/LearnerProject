@@ -1,0 +1,21 @@
+﻿﻿@model LearnerProject.Models.Entities.Student
+@{
+    ViewBag.Title = "AddStudent";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Ogrenci Ekle</h3>
+<form method="post">
+
+    <label>Ogrenci Adi Soyadi</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Kullanici Adi</label>
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    <label>Sifre</label>
+    @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+</form>
