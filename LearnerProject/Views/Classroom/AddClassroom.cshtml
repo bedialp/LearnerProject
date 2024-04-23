@@ -1,0 +1,21 @@
+﻿﻿@model LearnerProject.Models.Entities.Classroom
+@{
+    ViewBag.Title = "AddClassroom";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Derslik Ekle</h3>
+<form method="post">
+
+    <label>Derslik Ekle</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Ikon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+    <label>Aciklama Ekle</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save">Kaydet</i></button>
+</form>
