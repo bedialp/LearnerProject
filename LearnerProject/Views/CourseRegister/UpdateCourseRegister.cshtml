@@ -1,0 +1,22 @@
+﻿﻿@model LearnerProject.Models.Entities.CourseRegister
+@{
+    ViewBag.Title = "UpdateCourseRegister";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Kurs Kaydi Guncelle</h3>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.CourseRegisterId)
+    <br />
+    <label>Ogrenci Secimi Yap</label>
+    @Html.DropDownListFor(x => x.StudentId, (List<SelectListItem>)ViewBag.student, "Ogrenci Sec", new { @class = "form-control" })
+    <br />
+    <label>Kurs Secimi Yap</label>
+    @Html.DropDownListFor(x => x.CourseId, (List<SelectListItem>)ViewBag.course, "Kurs Sec", new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"> Kaydet</i></button>
+</form>
