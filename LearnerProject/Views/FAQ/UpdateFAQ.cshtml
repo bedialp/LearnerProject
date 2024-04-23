@@ -1,0 +1,23 @@
+﻿﻿@model LearnerProject.Models.Entities.FAQ
+@{
+    ViewBag.Title = "UpdateFAQ";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Sorulari & Cevaplari Güncelle</h3>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.FAQId)
+    <label>Sorular</label>
+    @Html.TextBoxFor(x => x.Question, new { @class = "form-control" })
+    <br />
+    <label>Cevaplar</label>
+    @Html.TextBoxFor(x => x.Answer, new { @class = "form-control" })
+    <br />
+    <label>Resim URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fa fa-edit"></i>Guncelle</button>
+</form>
