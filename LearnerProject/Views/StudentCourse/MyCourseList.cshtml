@@ -1,0 +1,17 @@
+﻿@model List<LearnerProject.Models.Entities.CourseVideo>
+@{
+    ViewBag.Title = "MyCourseList";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<h3>Kurs Icerigi</h3>
+
+@foreach (var item in Model)
+{
+    <div class="mt-2 mb-2">
+        <label>@item.VideoNumber</label>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ROMDAwb0cOM?si=KuP2ANLanX2j5ZmG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+}
