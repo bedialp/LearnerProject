@@ -3,7 +3,7 @@
     ViewBag.Title = "UpdateTestimonial";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-<h3 >Referans Güncelle</h3>
+<h3 >Referans Guncelle</h3>
 
 <form method="post">
 
@@ -14,10 +14,10 @@
     <label>Baslik</label>
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
     <br />
-    <label>Gorsel URL</label>
+    <label>Resim URL</label>
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br />
 
-    <button class="btn btn-outline-primary"><i class="fa fa-edit"></i>Güncelle</button>
+    <button class="btn btn-outline-primary"><i class="fa fa-edit"></i>Guncelle</button>
 
 </form>

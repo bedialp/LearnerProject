@@ -9,7 +9,7 @@
 <form method="post">
 
     <label>Kurs Secim</label>
-    @Html.DropDownListFor(y => y.CourseId, (List<SelectListItem>)ViewBag.course, "Kurs Seç", new { @class = "form-control" })
+    @Html.DropDownListFor(y => y.CourseId, (List<SelectListItem>)ViewBag.course, "Kurs Sec", new { @class = "form-control" })
     <br />
     <label>Inceleme Puani</label>
     @Html.TextBoxFor(x => x.ReviewValue, new { @class = "form-control" })
@@ -18,7 +18,7 @@
     @Html.TextAreaFor(x => x.Comment, new { @class = "form-control", style = "width: max; height: 200px;" })
     <br />
     <label>Ogrenci Secim</label>
-    @Html.DropDownListFor(x => x.StudentId, (List<SelectListItem>)ViewBag.student, "Öğrenci Seç", new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.StudentId, (List<SelectListItem>)ViewBag.student, "Ogrenci Sec", new { @class = "form-control" })
     <br />
 
     <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>

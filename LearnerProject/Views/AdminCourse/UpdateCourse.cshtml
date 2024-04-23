@@ -4,17 +4,18 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h3>Kurs Güncelleme Sayfası</h3>
+<h3>Kurs Guncelleme Sayfasi</h3>
 
 <form method="post">
+
     @Html.HiddenFor(x=>x.CourseId)
-    <label>Kurs Adı</label>
+    <label>Kurs Adi</label>
     @Html.TextBoxFor(x => x.CourseName, new { @class = "form-control" })
     <br />
     <label>Resim URL</label>
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
     <br />
-    <label>Açıklama</label>
+    <label>Aciklama</label>
     @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control" })
     <br />
     <label>Fiyat</label>
@@ -23,5 +24,6 @@
     <label>Kategori</label>
     @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, "Kategoriyi Seçin", new { @class = "form-control" })
     <br />
-    <button class="btn btn-outline-primary"><i class="fa fa-pen"></i> Güncelle</button>
+
+    <button class="btn btn-outline-primary"><i class="fa fa-pen"></i> Guncelle</button>
 </form>

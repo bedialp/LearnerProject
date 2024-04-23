@@ -134,10 +134,14 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ClassroomController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CourseRegisterController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLayoutController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
@@ -536,6 +540,18 @@
     <Content Include="Views\Review\Index.cshtml" />
     <Content Include="Views\Review\AddReview.cshtml" />
     <Content Include="Views\Review\UpdateReview.cshtml" />
+    <Content Include="Views\Classroom\Index.cshtml" />
+    <Content Include="Views\Classroom\AddClassroom.cshtml" />
+    <Content Include="Views\Classroom\UpdateClassroom.cshtml" />
+    <Content Include="Views\CourseRegister\Index.cshtml" />
+    <Content Include="Views\CourseRegister\AddCourseRegister.cshtml" />
+    <Content Include="Views\CourseRegister\UpdateCourseRegister.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\AddStudent.cshtml" />
+    <Content Include="Views\Student\UpdateStudent.cshtml" />
+    <Content Include="Views\FAQ\Index.cshtml" />
+    <Content Include="Views\FAQ\AddFAQ.cshtml" />
+    <Content Include="Views\FAQ\UpdateFAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
