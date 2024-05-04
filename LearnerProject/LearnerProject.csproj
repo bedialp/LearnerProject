@@ -563,6 +563,12 @@
     <Content Include="Views\StudentCourse\Index.cshtml" />
     <Content Include="Views\StudentCourse\MyCourseList.cshtml" />
     <Content Include="Views\StudentRegister\Index.cshtml" />
+    <Content Include="Views\Default\DefaultBannerPartial.cshtml" />
+    <Content Include="Views\Default\DefaultCategoryPartial.cshtml" />
+    <Content Include="Views\Default\DefaultClassroomPartial.cshtml" />
+    <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
+    <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
+    <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
