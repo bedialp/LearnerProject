@@ -18,6 +18,31 @@ namespace LearnerProject.Controllers
             return View();
         }
 
+        public PartialViewResult DefaultBannerPartial()
+        {
+            ViewBag.LatestCourse = context.Courses.OrderByDescending(x => x.CourseId).Select(x => x.CourseId).FirstOrDefault();
+            var values = context.Banners.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultCategoryPartial()
+        {
+            var values = context.Categories.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultTeacherPartial()
+        {
+            var values = context.Teachers/*.Where(x => x.Status == true).OrderByDescending(x => x.TeacherId).Take(6)*/.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultClassroomPartial()
+        {
+            var values = context.Classrooms.ToList();
+            return PartialView(values);
+        }
+
         public PartialViewResult DefaultCoursePartial()
         {
 
@@ -32,6 +57,24 @@ namespace LearnerProject.Controllers
             var reviewList = context.Reviews.Where(x => x.CourseId == id).ToList(); // Belirtilen kursa ait incelemeler alınır
             ViewBag.review = reviewList; // Incelemeleri ViewBag aracılığıyla View'a gönderilir
             return View(values);
+        }
+
+        public PartialViewResult DefaultAboutPartial()
+        {
+            var values = context.Abouts.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultTestimonialPartial()
+        {
+            var values = context.Testimonials.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultFAQPartial()
+        {
+            var values = context.FAQs.ToList();
+            return PartialView(values);
         }
     }
 }

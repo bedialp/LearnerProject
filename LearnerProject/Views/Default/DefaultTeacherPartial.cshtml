@@ -1,0 +1,32 @@
+﻿﻿@model List<LearnerProject.Models.Entities.Teacher>
+
+<div class="services-section" id="teacher">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+
+                <div class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">
+                    <h2 class="line-bottom mb-4">Alanında Uzman Eğitmenlerimizi Tanıyın</h2>
+                </div>
+
+                <p data-aos="fade-up" data-aos-delay="100">Learner'da eğitmenler, öğrencilerin hayallerini gerçeğe dönüştürmek için yola çıkan yıldızlar gibidir. Her biri kendi alanında uzmanlaşmış, tutku dolu ve öğretme sanatının inceliklerine hakim eğitmenlerimiz, öğrencilere sadece bilgi aktarmakla kalmaz, aynı zamanda onları ilham verici bir yolculuğa çıkarırlar.</p>
+                <br />
+                @foreach (var item in Model)
+                {
+                    <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
+                        <li>@item.NameSurname </li>
+                    </ul>
+                }
+
+                <p data-aos="fade-up" data-aos-delay="300"><a href="/FullTeacher/Index/" class="btn btn-primary">Tüm Eğitmenleri Görüntüle</a></p>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+            
+                    <img src="~/Templates/learner-1.0.0/images/teacher-min.jpg" alt="Image" class="img-fluid">
+        
+          
+            </div>
+        </div>
+    </div>
+</div>
