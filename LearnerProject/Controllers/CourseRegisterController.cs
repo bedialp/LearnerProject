@@ -8,28 +8,39 @@ using System.Web.Mvc;
 
 namespace LearnerProject.Controllers
 {
-    public class CourseRegisterController : Controller
-    {
-        LearnerContext context = new LearnerContext();
+	public class CourseRegisterController : Controller
+	{
+		LearnerContext context = new LearnerContext();
 
-        [HttpGet]
-        public ActionResult Index()
-        {
-            var courseList = context.Courses.ToList();
-            List<SelectListItem> courses = (from x in courseList select new SelectListItem { Text = x.CourseName, Value = x.CourseId.ToString() }).ToList();
-            ViewBag.course = courses;
-            return View();
-        }
+		[HttpGet]
+		public ActionResult Index()
+		{
+			var courseList = context.Courses.ToList();
+			List<SelectListItem> courses = (from x in courseList
+											select new SelectListItem
+											{
+												Text = x.CourseName,
+												Value = x.CourseId.ToString()
+											}).ToList();
+			ViewBag.course = courses;
+			return View();
+		}
 
-        [HttpPost]
-        public ActionResult Index(CourseRegister courseRegister)
-        {
-            string student = Session["studentName"].ToString();
-            courseRegister.StudentId= context.Students.Where(x=>x.NameSurname==student).Select(x=>x.StudentId).FirstOrDefault();
-            context.CourseRegisters.Add(courseRegister);
-            context.SaveChanges();
+		[HttpPost]
+		public ActionResult Index(CourseRegister courseRegister)
+		{
+			string student = Session["studentName"].ToString();
+			courseRegister.StudentId = context.Students.Where(x => x.NameSurname == student).Select(x => x.StudentId).FirstOrDefault();
+			context.CourseRegisters.Add(courseRegister);
+			context.SaveChanges();
 
-            return RedirectToAction(nameof(Index));  
-        }
-    }
+			return RedirectToAction(nameof(Index));
+		}
+
+		public ActionResult RegisteredStudentList()
+		{
+			var values = context.CourseRegisters.ToList();
+			return View(values);
+		}
+	}
 }

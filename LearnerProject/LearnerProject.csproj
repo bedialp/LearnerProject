@@ -140,7 +140,6 @@
     <Compile Include="Controllers\CourseRegisterController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\StudentCourseController.cs" />
     <Compile Include="Controllers\StudentLayoutController.cs" />
@@ -369,9 +368,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Templates\darkpan-1.0.0\lib\owlcarousel\LICENSE" />
     <Content Include="Templates\darkpan-1.0.0\lib\waypoints\links.php" />
     <Content Include="Templates\darkpan-1.0.0\scss\bootstrap.scss" />
@@ -569,6 +565,7 @@
     <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
     <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
     <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
+    <Content Include="Views\CourseRegister\RegisteredStudentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
