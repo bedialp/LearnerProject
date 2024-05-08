@@ -1,0 +1,38 @@
+﻿@model List<LearnerProject.Models.Entities.Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h3>Referanslar</h3>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Isim Soyisim</th>
+            <th>Baslık</th>
+            <th>Resim</th>
+            <th>Islemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.NameSurname</td>
+                <td>@item.Title</td>
+                <td><img src="@item.ImageUrl" style="height:50px;width:50px;" /></td>
+
+                <td>
+                    <a href="/AdminTestimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Sil</a>
+                    <a href="/AdminTestimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-info"> <i class="fa fa-edit"></i>Guncelle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/AdminTestimonial/AddTestimonial/" class="btn btn-outline-success"><i class="fa fa-plus m-2"></i>Yeni Referans Ekle</a>

@@ -1,0 +1,42 @@
+﻿@model List<LearnerProject.Models.Entities.FAQ>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h3>En Cok Sorulan Sorular</h3>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Sorular</th>
+            <th>Cevaplar</th>
+            <th>Resim</th>
+            <th>Durum</th>
+            <th>Aktif</th>
+            <th>Pasif</th>
+            <th>Sil</th>
+            <th>Guncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Question</td>
+                <td>@item.Answer</td>
+                <td><img src="@item.ImageUrl" style="height:50px;width:50px;" /></td>
+                <td>@( item.Status == true ? "AKTIF" : "PASIF" )</td>
+                <td style="width:8%"><a href="/AdminFAQ/MakeActive/@item.FAQId/" class="btn btn-outline-success">Aktif Yap</a></td>
+                <td style="width:8%"><a href="/AdminFAQ/MakePassive/@item.FAQId/" class="btn btn-outline-warning">Pasif Yap</a></td>
+                <td style="width:6%"><a href="/AdminFAQ/DeleteFAQ/@item.FAQId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a></td>
+                <td style="width:9%"><a href="/AdminFAQ/UpdateFAQ/@item.FAQId" class="btn btn-outline-info"> <i class="fa fa-edit"></i> Guncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/AdminFAQ/AddFAQ/" class="btn btn-outline-success"><i class="fa fa-plus m-2"></i> En Cok Sorulan Sorulardan Ekle</a>

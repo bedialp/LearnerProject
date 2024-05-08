@@ -127,31 +127,32 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\AdminContactController.cs" />
-    <Compile Include="Controllers\AdminCourseController.cs" />
-    <Compile Include="Controllers\AdminDashboardController.cs" />
-    <Compile Include="Controllers\AdminLayoutController.cs" />
-    <Compile Include="Controllers\BannerController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\ClassroomController.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\AdminCourseRegisterController.cs" />
-    <Compile Include="Controllers\CourseRegisterController.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\FAQController.cs" />
-    <Compile Include="Controllers\ReviewController.cs" />
-    <Compile Include="Controllers\StudentCourseController.cs" />
-    <Compile Include="Controllers\StudentLayoutController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
-    <Compile Include="Controllers\StudentLoginController.cs" />
-    <Compile Include="Controllers\StudentRegisterController.cs" />
-    <Compile Include="Controllers\TeacherController.cs" />
-    <Compile Include="Controllers\TeacherCourseController.cs" />
-    <Compile Include="Controllers\TeacherLayoutController.cs" />
-    <Compile Include="Controllers\TeacherLoginController.cs" />
-    <Compile Include="Controllers\TestimonialController.cs" />
-    <Compile Include="Controllers\UILayoutController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminAboutController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminContactController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminCourseController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminDashboardController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminLayoutController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminLoginController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminBannerController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminClassroomController.cs" />
+    <Compile Include="Controllers\DefaultControl\ContactController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminCourseRegisterController.cs" />
+    <Compile Include="Controllers\StudentControl\StudentCourseRegisterController.cs" />
+    <Compile Include="Controllers\DefaultControl\DefaultController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminFAQController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminReviewController.cs" />
+    <Compile Include="Controllers\StudentControl\StudentCourseController.cs" />
+    <Compile Include="Controllers\StudentControl\StudentLayoutController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminStudentController.cs" />
+    <Compile Include="Controllers\StudentControl\StudentLoginController.cs" />
+    <Compile Include="Controllers\StudentControl\StudentRegisterController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminTeacherController.cs" />
+    <Compile Include="Controllers\TeacherControl\TeacherCourseController.cs" />
+    <Compile Include="Controllers\TeacherControl\TeacherLayoutController.cs" />
+    <Compile Include="Controllers\TeacherControl\TeacherLoginController.cs" />
+    <Compile Include="Controllers\AdminControl\AdminTestimonialController.cs" />
+    <Compile Include="Controllers\DefaultControl\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,9 +172,18 @@
     <Compile Include="Migrations\202404202056013_mig_contact_and_message_table_added.Designer.cs">
       <DependentUpon>202404202056013_mig_contact_and_message_table_added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405082110291_mig-admin-table.cs" />
+    <Compile Include="Migrations\202405082110291_mig-admin-table.Designer.cs">
+      <DependentUpon>202405082110291_mig-admin-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405082114146_mig-admin-table-addcontext.cs" />
+    <Compile Include="Migrations\202405082114146_mig-admin-table-addcontext.Designer.cs">
+      <DependentUpon>202405082114146_mig-admin-table-addcontext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\Entities\About.cs" />
+    <Compile Include="Models\Entities\Admin.cs" />
     <Compile Include="Models\Entities\Banner.cs" />
     <Compile Include="Models\Entities\Category.cs" />
     <Compile Include="Models\Entities\Classroom.cs" />
@@ -454,9 +464,9 @@
     <Content Include="Templates\darkpan-1.0.0\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="Templates\darkpan-1.0.0\scss\bootstrap\scss\_variables.scss" />
     <Content Include="Views\AdminLayout\Index.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Category\AddCategory.cshtml" />
-    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\AdminCategory\Index.cshtml" />
+    <Content Include="Views\AdminCategory\AddCategory.cshtml" />
+    <Content Include="Views\AdminCategory\UpdateCategory.cshtml" />
     <Content Include="Views\AdminLayout\AdminLayoutHead.cshtml" />
     <Content Include="Views\AdminLayout\AdminLayoutSideBar.cshtml" />
     <Content Include="Templates\learner-1.0.0\fonts\flaticon\font\Flaticon.eot" />
@@ -530,33 +540,33 @@
     <Content Include="Views\AdminContact\Index.cshtml" />
     <Content Include="Views\AdminContact\AddContact.cshtml" />
     <Content Include="Views\AdminContact\UpdateContact.cshtml" />
-    <Content Include="Views\Banner\Index.cshtml" />
-    <Content Include="Views\Banner\AddBanner.cshtml" />
-    <Content Include="Views\Banner\UpdateBanner.cshtml" />
-    <Content Include="Views\Testimonial\Index.cshtml" />
-    <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
-    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
-    <Content Include="Views\About\AddAbout.cshtml" />
-    <Content Include="Views\About\UpdateAbout.cshtml" />
-    <Content Include="Views\Review\Index.cshtml" />
-    <Content Include="Views\Review\AddReview.cshtml" />
-    <Content Include="Views\Review\UpdateReview.cshtml" />
-    <Content Include="Views\Classroom\Index.cshtml" />
-    <Content Include="Views\Classroom\AddClassroom.cshtml" />
-    <Content Include="Views\Classroom\UpdateClassroom.cshtml" />
-    <Content Include="Views\AdminCourseRegister\Index.cshtml" />
-    <Content Include="Views\AdminCourseRegister\AddCourseRegister.cshtml" />
-    <Content Include="Views\AdminCourseRegister\UpdateCourseRegister.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Student\AddStudent.cshtml" />
-    <Content Include="Views\Student\UpdateStudent.cshtml" />
-    <Content Include="Views\FAQ\Index.cshtml" />
-    <Content Include="Views\FAQ\AddFAQ.cshtml" />
-    <Content Include="Views\FAQ\UpdateFAQ.cshtml" />
+    <Content Include="Views\AdminBanner\Index.cshtml" />
+    <Content Include="Views\AdminBanner\AddBanner.cshtml" />
+    <Content Include="Views\AdminBanner\UpdateBanner.cshtml" />
+    <Content Include="Views\AdminTestimonial\Index.cshtml" />
+    <Content Include="Views\AdminTestimonial\AddTestimonial.cshtml" />
+    <Content Include="Views\AdminTestimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\AdminAbout\Index.cshtml" />
+    <Content Include="Views\AdminAbout\AddAbout.cshtml" />
+    <Content Include="Views\AdminAbout\UpdateAbout.cshtml" />
+    <Content Include="Views\AdminReview\Index.cshtml" />
+    <Content Include="Views\AdminReview\AddReview.cshtml" />
+    <Content Include="Views\AdminReview\UpdateReview.cshtml" />
+    <Content Include="Views\AdminClassroom\Index.cshtml" />
+    <Content Include="Views\AdminClassroom\AddClassroom.cshtml" />
+    <Content Include="Views\AdminClassroom\UpdateClassroom.cshtml" />
+    <Content Include="Views\CourseRegister\Index.cshtml" />
+    <Content Include="Views\CourseRegister\AddCourseRegister.cshtml" />
+    <Content Include="Views\CourseRegister\UpdateCourseRegister.cshtml" />
+    <Content Include="Views\AdminStudent\Index.cshtml" />
+    <Content Include="Views\AdminStudent\AddStudent.cshtml" />
+    <Content Include="Views\AdminStudent\UpdateStudent.cshtml" />
+    <Content Include="Views\AdminFAQ\Index.cshtml" />
+    <Content Include="Views\AdminFAQ\AddFAQ.cshtml" />
+    <Content Include="Views\AdminFAQ\UpdateFAQ.cshtml" />
     <Content Include="Views\StudentLayout\Index.cshtml" />
     <Content Include="Views\StudentLogin\Index.cshtml" />
-    <Content Include="Views\CourseRegister\Index.cshtml" />
+    <Content Include="Views\StudentCourseRegister\Index.cshtml" />
     <Content Include="Views\StudentCourse\Index.cshtml" />
     <Content Include="Views\StudentCourse\MyCourseList.cshtml" />
     <Content Include="Views\StudentRegister\Index.cshtml" />
@@ -566,12 +576,15 @@
     <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
     <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
     <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
-    <Content Include="Views\CourseRegister\RegisteredStudentList.cshtml" />
+    <Content Include="Views\StudentCourseRegister\RegisteredStudentList.cshtml" />
     <Content Include="Views\Default\DefaultAboutPartial.cshtml" />
     <Content Include="Views\TeacherLayout\TeacherLayoutSidebar.cshtml" />
     <Content Include="Views\TeacherLayout\TeacherLayoutHead.cshtml" />
-    <Content Include="Views\Teacher\Index.cshtml" />
-    <Content Include="Views\Teacher\AddTeacher.cshtml" />
+    <Content Include="Views\AdminTeacher\Index.cshtml" />
+    <Content Include="Views\AdminTeacher\AddTeacher.cshtml" />
+    <Content Include="Views\StudentLayout\StudentLayoutSidebar.cshtml" />
+    <Content Include="Views\StudentLayout\StudentLayoutHead.cshtml" />
+    <Content Include="Views\AdminLogin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -615,6 +628,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404202056013_mig_contact_and_message_table_added.resx">
       <DependentUpon>202404202056013_mig_contact_and_message_table_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405082110291_mig-admin-table.resx">
+      <DependentUpon>202405082110291_mig-admin-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405082114146_mig-admin-table-addcontext.resx">
+      <DependentUpon>202405082114146_mig-admin-table-addcontext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
