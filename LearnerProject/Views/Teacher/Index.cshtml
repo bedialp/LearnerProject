@@ -1,11 +1,12 @@
-﻿@model List<LearnerProject.Models.Entities.Student>
+﻿@model List<LearnerProject.Models.Entities.Teacher>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
     int count = 0;
 }
 
-<h3>Ogrenci Bilgileri</h3>
+
+<h3>Ogretmen Bilgileri</h3>
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -28,11 +29,11 @@
                 <td>@item.Password</td>
 
                 <td>
-                    <a href="/Student/DeleteStudent/@item.StudentId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a>
-                    <a href="/Student/UpdateStudent/@item.StudentId" class="btn btn-outline-info"> <i class="fa fa-edit"></i> Guncelle</a>
+                    <a href="/Teacher/DeleteTeacher/@item.TeacherId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a>
+                    <a href="/Teacher/UpdateTeacher/@item.TeacherId" class="btn btn-outline-info"> <i class="fa fa-edit"></i> Guncelle</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a href="/Student/AddStudent/" class="btn btn-outline-success"><i class="fa fa-plus m-2"></i> Ogrenci Ekle</a>
+<a href="/Teacher/AddTeacher/" class="btn btn-outline-success"><i class="fa fa-plus m-2"></i> Ogretmen Ekle </a>

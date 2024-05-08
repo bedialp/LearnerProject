@@ -10,7 +10,11 @@
     <tr>
         <th>#</th>
         <th>Kategori Adi</th>
-        <th>Islemler</th>
+        <th>Durum</th>
+        <th>Aktif</th>
+        <th>Pafif</th>
+        <th>Sil</th>
+        <th>Guncelle</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -18,10 +22,12 @@
         <tr>
             <td>@count</td>
             <td>@item.CategoryName</td>
-            <td>
-                <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a>
-                <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Guncelle</a>
-            </td>
+            <td>@( item.Status == true ? "AKTIF" : "PASIF" )</td>
+            <td style="width:7%"><a href="/Category/MakeActive/@item.CategoryId/" class="btn btn-outline-success">Aktif Yap</a></td>
+            <td style="width:7%"><a href="/Category/MakePassive/@item.CategoryId/" class="btn btn-outline-warning">Pasif Yap</a></td>
+            <td style="width:5%"><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a></td>
+            <td style="width:8%"><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Guncelle</a></td>
+
         </tr>
     }
 </table>

@@ -11,14 +11,19 @@
             @foreach (var item in Model)
             {
                 <div class="col-sm-6 col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="0">
-                    <a href="#" class="category d-flex align-items-start h-100">
-                        <div>
-                            <i class="@item.Icon"></i>
-                        </div>
-                        <div>
-                            <h3>@item.CategoryName</h3>
-                        </div>
-                    </a>
+                    @if (@item.Status == true)
+                    {
+                        <a href="#" class="category d-flex align-items-start h-100">
+
+                            <div>
+                                <i class="@item.Icon"></i>
+                            </div>
+                            <div>
+                                <h3>@item.CategoryName</h3>
+                            </div>
+
+                        </a>
+                    }
                 </div>
             }
         </div>

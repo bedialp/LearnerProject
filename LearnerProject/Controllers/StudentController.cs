@@ -60,38 +60,5 @@ namespace LearnerProject.Controllers
             return RedirectToAction("Index");
 
         }
-
-        //// OGRENCI LOGIN ISLEMI
-        //[AllowAnonymous]
-        //[HttpGet]
-        //public ActionResult StudentLogin()
-        //{
-        //    return View();
-        //}
-        //[AllowAnonymous]
-        //[HttpPost]
-        //public ActionResult StudentLogin(Student student)
-        //{
-        //    var value = context.Students.FirstOrDefault(x => x.UserName == student.UserName && x.Password == student.Password);
-        //    if (value != null)
-        //    {
-        //        FormsAuthentication.SetAuthCookie(value.UserName, false);
-        //        Session["student"] = value.UserName;
-        //        return RedirectToAction("Index", "StudentDashboard");
-        //    }
-        //    else
-        //    {
-        //        ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı!");
-        //        return View();
-        //    }
-        //}
-        //// OGRENCI LOGOUT SISTEMI
-        //[AllowAnonymous]
-        //public ActionResult Logout()
-        //{
-        //    FormsAuthentication.SignOut();
-        //    Session.Abandon();
-        //    return RedirectToAction("Index", "Default");
-        //}
     }
 }

@@ -146,6 +146,7 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\StudentRegisterController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLayoutController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
@@ -566,6 +567,11 @@
     <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
     <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
     <Content Include="Views\CourseRegister\RegisteredStudentList.cshtml" />
+    <Content Include="Views\Default\DefaultAboutPartial.cshtml" />
+    <Content Include="Views\TeacherLayout\TeacherLayoutSidebar.cshtml" />
+    <Content Include="Views\TeacherLayout\TeacherLayoutHead.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Teacher\AddTeacher.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
