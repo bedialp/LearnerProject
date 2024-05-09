@@ -7,13 +7,13 @@ namespace LearnerProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class migadmintable : IMigrationMetadata
+    public sealed partial class Mig_teacher_coursevideo_connected : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(migadmintable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Mig_teacher_coursevideo_connected));
         
         string IMigrationMetadata.Id
         {
-            get { return "202405082110291_mig-admin-table"; }
+            get { return "202405091821560_Mig_teacher_coursevideo_connected"; }
         }
         
         string IMigrationMetadata.Source
