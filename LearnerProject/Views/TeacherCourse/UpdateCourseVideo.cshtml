@@ -1,0 +1,21 @@
+﻿@model LearnerProject.Models.Entities.CourseVideo
+@{
+    ViewBag.Title = "UpdateCourseVideo";
+    Layout = "~/Views/TeacherLayout/Index.cshtml";
+}
+
+<h2>Kurs Video Guncelle</h2>
+<br />
+
+<form method="post">
+    @Html.HiddenFor(x => x.CourseVideoId, new { @class = "form-control" })
+
+    @Html.Label("Video Numara")
+    @Html.TextBoxFor(x => x.VideoNumber, new { @class = "form-control" })
+    <br />
+    @Html.Label("Video URL")
+    @Html.TextBoxFor(x => x.VideoUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"> Kaydet</i></button>
+</form>
