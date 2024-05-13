@@ -1,7 +1,7 @@
 ﻿@model LearnerProject.Models.Entities.Message
 
 <div class="col-lg-7 mr-auto order-1" data-aos="fade-up" data-aos-delay="200" id="contact">
-    <form action="SendMessage" method="post">
+    <form action="@Url.Action("SendMessage", "Contact")" method="post">
         <div class="row">
             <div class="col-6 mb-3">
                 @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", @placeholder = "Adınız Soyadınız" })

@@ -11,11 +11,11 @@
             <div class="col-12">
                 <div class="row justify-content-center ">
                     <div class="col-lg-6 text-center ">
-                        <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Kurs Detayı</h1>
+                        <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Kurs ile Ilgili Merak Ettikleriniz</h1>
                         <div class="mb-5 text-white desc mx-auto" data-aos="fade-up" data-aos-delay="200">
                         </div>
 
-                        <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="/FullCourse/Index/" class="btn btn-secondary">Tüm Kurslar</a></p>
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="/Default/CourseDetail/@Model.CourseId/#details" class="btn btn-secondary">Detaylari Gor</a></p>
                     </div>
                 </div>
             </div>
@@ -23,9 +23,9 @@
     </div> <!-- /.container -->
 </div> <!-- /.untree_co-hero -->
 <br />
-<div class="container">
+<div class="container" id="details">
     <div class="row">
-        <div class="col-lg-5 mr-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+        <div class="col-lg-5 mr-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0" >
             <img src="@Model.ImageUrl" alt="image" class="img-fluid">
             <br />
             <div class="review">
