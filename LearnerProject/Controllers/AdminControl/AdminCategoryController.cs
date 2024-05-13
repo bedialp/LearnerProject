@@ -21,7 +21,7 @@ namespace LearnerProject.Controllers
 		public ActionResult DeleteCategory(int id)
 		{
 			var value = context.Categories.Find(id);
-			value.Status = false;
+			context.Categories.Remove(value);
 			context.SaveChanges();
 			return RedirectToAction("Index");
 		}
@@ -63,7 +63,7 @@ namespace LearnerProject.Controllers
 		// AKTİF - PASİF BUTONU İŞLEMLERİ
 		public ActionResult MakeActive(int id)
 		{
-			var value =context.Categories.Find(id);
+			var value = context.Categories.Find(id);
 			value.Status = true;
 			context.SaveChanges();
 			return RedirectToAction("Index");

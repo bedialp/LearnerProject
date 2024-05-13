@@ -1,0 +1,47 @@
+﻿﻿@model List<LearnerProject.Models.Entities.Message>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h3>Gelen Mesajlar Listesi</h3>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Mesaj Konusu</th>
+        <th>Mesaj Icerigi</th>
+        <th>Durum</th>
+        <th>Mesaj Detayi</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Subject</td>
+            <td>@(item.MessageContent.Length > 50 ? item.MessageContent.Substring(0, 50) : item.MessageContent)</td>
+            <td style="width:15%;">
+                @{
+                    if (item.IsRead == true)
+                    {
+                        <a href="/AdminMessage/IsNotRead/@item.MessageId" class="btn btn-outline-success"><i class="fas fa-check"></i> Okundu</a>
+                    }
+                    else
+                    {
+                        <a href="/AdminMessage/IsRead/@item.MessageId" class="btn btn-outline-warning"><i class="fas fa-eye-slash"></i> Okunmadi</a>
+                    }
+                }
+            </td>
+            <td style="width:9%;"><button class="btn btn-outline-info" onclick="window.location.href='/AdminMessage/MessageDetail/@item.MessageId'"> Detay</button></td>
+
+            <td style="width:8%;"><a href="/AdminMessage/DeleteMessage/@item.MessageId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a></td>
+        </tr>
+    }
+</table>

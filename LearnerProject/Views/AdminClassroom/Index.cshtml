@@ -14,7 +14,8 @@
             <th>Derslik Adi</th>
             <th>Ikon</th>
             <th>Acıklama</th>
-            <th>Islemler</th>
+            <th>Sil</th>
+            <th>Guncelle</th>
         </tr>
     </thead>
     <tbody>
@@ -27,10 +28,8 @@
                 <td>@item.Icon</td>
                 <td>@item.Description</td>
 
-                <td>
-                    <a href="/AdminClassroom/DeleteClassroom/@item.ClassroomId" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Sil</a>
-                    <a href="/AdminClassroom/UpdateClassroom/@item.ClassroomId" class="btn btn-outline-info"> <i class="fa fa-edit"></i>Guncelle</a>
-                </td>
+                <td><a href="/AdminClassroom/DeleteClassroom/@item.ClassroomId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a></td>
+                <td><a href="/AdminClassroom/UpdateClassroom/@item.ClassroomId" class="btn btn-outline-info"> <i class="fa fa-edit"></i> Guncelle</a></td>
             </tr>
         }
     </tbody>

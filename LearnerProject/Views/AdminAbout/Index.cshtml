@@ -17,7 +17,8 @@
             <th>Item1</th>
             <th>Item2</th>
             <th>Item3</th>
-            <th>Islemler</th>
+            <th>Sil</th>
+            <th>Guncelle</th>
         </tr>
     </thead>
     <tbody>
@@ -32,10 +33,8 @@
                 <td>@item.Item1</td>
                 <td>@item.Item2</td>
                 <td>@item.Item3</td>
-                <td>
-                    <a href="/AdminAbout/DeleteAbout/@item.AboutId" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Sil</a>
-                    <a href="/AdminAbout/UpdateAbout/@item.AboutId" class="btn btn-outline-info"> <i class="fa fa-edit"></i>Guncelle</a>
-                </td>
+                <td><a href="/AdminAbout/DeleteAbout/@item.AboutId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a></td>
+                <td><a href="/AdminAbout/UpdateAbout/@item.AboutId" class="btn btn-outline-info"> <i class="fa fa-edit"></i> Guncelle</a></td>
             </tr>
         }
     </tbody>
