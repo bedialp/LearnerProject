@@ -56,3 +56,6 @@ Learner - Egitim Sitesi
 ![FAQ](https://github.com/bedialp/LearnerProject/assets/56656000/2f3ab3dc-8fd5-45aa-a4d3-d889b5af73be)
 ---
 Diger Sayfalar Standart CRUD islemleri icermektedir. 
+---
+[](url)![DB-Diagram](https://github.com/bedialp/LearnerProject/assets/56656000/0094281b-cf19-439f-99ee-34391de89bfc)
+
