@@ -61,7 +61,9 @@ namespace LearnerProject.Controllers
 
         public PartialViewResult DefaultAboutPartial()
         {
-            var values = context.Abouts.ToList();
+			ViewBag.studentCount = context.Students.Count();
+			ViewBag.teacherCount = context.Teachers.Count();
+			var values = context.Abouts.ToList();
             return PartialView(values);
         }
 
